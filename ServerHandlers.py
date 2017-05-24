@@ -34,7 +34,7 @@ class InitResponseHandler(AbstractHandler):
             return 0
 
 
-class GomokuInitRequest():
+class GomokuInitRequest(AbstractRequest):
     def __init__(self,Client):
         self.client=Client
 
@@ -250,18 +250,6 @@ class MoveRequest(AbstractRequest):
                           'Connected successfully\n\n 1 Play GOMOKU\n 2 Play MORE-LESS\n 3 Exit\n\n\nType "END" to exit in any time')
         # print(json.dumps(message.__dict__))
         self.client.send(str.encode(json.dumps(message.__dict__)))
-
-
-class EndResponseHandler(AbstractHandler):
-    def __init__(self):
-        pass
-
-    def handle(self,Client,response):
-        str_message = response['message']
-        print(str_message)
-        if str_message=="END":
-            return 3
-        return 6
 
 
 class EndRequest(AbstractRequest):

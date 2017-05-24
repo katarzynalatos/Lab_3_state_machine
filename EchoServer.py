@@ -2,7 +2,6 @@ from ServerHandlers import InitRequest
 from ServerHandlers import InitResponseHandler
 from ServerHandlers import MoveRequest
 from ServerHandlers import EndRequest
-from ServerHandlers import EndResponseHandler
 from ServerHandlers import GomokuInitRequest
 from ServerHandlers import MoreLessInitRequest
 from ServerHandlers import GomokuMoveResponseHandler
@@ -27,7 +26,7 @@ class EchoServer:
         self.sock.listen()
         connection, client_address=self.sock.accept()
         logging.info("Player no" + str(client_address) + " successfully connected.")
-        dictionary = {'INIT_REQ': InitRequest(connection), 'INIT_RESP': InitResponseHandler(), 'MOVE_REQ': MoveRequest(connection),'MOVE_RESP':0,'END_REQ': EndRequest(connection),'END_RESP':EndResponseHandler()}
+        dictionary = {'INIT_REQ': InitRequest(connection), 'INIT_RESP': InitResponseHandler(), 'MOVE_REQ': MoveRequest(connection),'MOVE_RESP':0,'END_REQ': EndRequest(connection)}
 
         while True:
             if self.state==0:
