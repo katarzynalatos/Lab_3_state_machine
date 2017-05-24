@@ -1,0 +1,17 @@
+INFO:root:Player no('127.0.0.1', 1432) successfully connected.
+INFO:root:Player chose More Less game.
+INFO:root:Player typed name
+INFO:root:Player chose too small value: 200
+INFO:root:Player chose too small value: 500
+INFO:root:Player chose too small value: 700
+INFO:root:Player chose too small value: 800
+INFO:root:Player chose too big value: 900
+INFO:root:Player chose too big value: 880
+INFO:root:Player chose too big value: 850
+INFO:root:Player chose too big value: 830
+INFO:root:Player chose too big value: 810
+INFO:root:Player chose too small value: 801
+INFO:root:Player chose too big value: 805
+INFO:root:Player typed incorrect data.
+INFO:root:Player won More Less game. Value: 803
+INFO:root:Player successfully disconnected.
